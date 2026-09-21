@@ -1,46 +1,63 @@
 import React from 'react';
 
+import salesImg from '../assets/services/sales.png';
+import disasterImg from '../assets/services/disater.png';
+import hostingImg from '../assets/services/hosting.png';
+import cloudImg from '../assets/services/cloud.png';
+import pabxImg from '../assets/services/pabx.png';
+import backupImg from '../assets/services/backup.png';
+import remoteImg from '../assets/services/remote.png';
+import webdevImg from '../assets/services/webdev.png';
+
 export default function ServicesSection() {
   const services = [
     {
       title: 'Sales of ICT Equipment',
       description: 'Procurement and delivery of tier-one hardware, workstations, servers, and networking gear.',
-      badge: 'Hardware & Tech'
+      badge: 'Hardware & Tech',
+      icon: salesImg
     },
     {
       title: 'Disaster Recovery',
       description: 'Business continuity planning, real-time data replication, and rapid disaster restoration.',
-      badge: 'Security'
+      badge: 'Security',
+      icon: disasterImg
     },
     {
       title: 'Hosting Services',
       description: 'Secure enterprise domain, email, and high-uptime server web hosting solutions.',
-      badge: 'Infrastructure'
+      badge: 'Infrastructure',
+      icon: hostingImg
     },
     {
       title: 'Cloud Services',
       description: 'Scalable cloud migration, virtualization management, and remote infrastructure environments.',
-      badge: 'Cloud'
+      badge: 'Cloud',
+      icon: cloudImg
     },
     {
       title: 'PABX Solutions',
       description: 'Modern VOIP, IP-telephony, and integrated PBX communication networks.',
-      badge: 'Telecoms'
+      badge: 'Telecoms',
+      icon: pabxImg
     },
     {
       title: 'Backup Solutions',
       description: 'Automated on-site and off-site encrypted data backup management.',
-      badge: 'Data Safety'
+      badge: 'Data Safety',
+      icon: backupImg
     },
     {
       title: 'Remote Services',
       description: 'Fast 24/7 helpdesk remote diagnostics, troubleshooting, and system updates.',
-      badge: 'Support'
+      badge: 'Support',
+      icon: remoteImg
     },
     {
       title: 'Web Development & Systems',
       description: 'Custom web application design, database engineering, and software system maintenance.',
-      badge: 'Software'
+      badge: 'Software',
+      icon: webdevImg
     }
   ];
 
@@ -57,7 +74,7 @@ export default function ServicesSection() {
             Our Core Managed Services
           </h2>
           <p className="text-slate-600 text-base md:text-lg leading-relaxed max-w-4xl">
-            Based on a <strong className="text-slate-900 font-semibold">managed services model</strong>, our solutions are proactive rather than reactive. We prevent IT issues before they turn into costly downtime. Charging a predictable flat monthly fee reduces your overhead while ensuring your networks remain continuously healthy.
+            Based on a <strong className="text-slate-900 font-semibold">managed services model</strong>, our solutions are proactive rather than reactive. We prevent IT issues before they turn into costly downtime.
           </p>
         </div>
 
@@ -74,10 +91,16 @@ export default function ServicesSection() {
                 key={index}
                 className="bg-white rounded-3xl border border-slate-200 p-6 flex flex-col justify-between hover:shadow-lg hover:border-slate-300 transition-all duration-300 group"
               >
-                <div className="space-y-3">
-                  <span className="inline-block text-[10px] font-bold uppercase tracking-widest text-slate-500 bg-slate-100 px-2.5 py-1 rounded-full">
-                    {item.badge}
-                  </span>
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between">
+                    <div className="w-12 h-12 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center p-2.5">
+                      <img src={item.icon} alt={item.title} className="w-full h-full object-contain" />
+                    </div>
+                    <span className="inline-block text-[10px] font-bold uppercase tracking-widest text-slate-500 bg-slate-100 px-2.5 py-1 rounded-full">
+                      {item.badge}
+                    </span>
+                  </div>
+
                   <h4 className="text-lg font-bold text-slate-900 group-hover:text-slate-800 transition-colors">
                     {item.title}
                   </h4>

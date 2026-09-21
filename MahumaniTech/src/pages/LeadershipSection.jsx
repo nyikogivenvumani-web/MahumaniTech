@@ -1,4 +1,6 @@
 import React from 'react';
+import ceoImg from '../assets/ceo.png';
+import directorImg from '../assets/director.png';
 
 export default function LeadershipSection() {
   return (
@@ -25,9 +27,11 @@ export default function LeadershipSection() {
           <div className="bg-[#f7f9fd] rounded-3xl border border-slate-200 p-8 space-y-6 flex flex-col justify-between hover:border-slate-300 transition-all">
             <div className="space-y-4">
               <div className="flex items-center gap-4">
-                <div className="w-16 h-16 rounded-2xl bg-slate-900 text-white font-serif-display text-2xl flex items-center justify-center font-bold shadow-md shrink-0">
-                  TS
-                </div>
+                <img 
+                  src={ceoImg} 
+                  alt="Thomas Shirindza" 
+                  className="w-16 h-16 rounded-2xl object-cover border border-slate-200 shadow-sm shrink-0"
+                />
                 <div>
                   <h3 className="text-xl font-bold text-slate-900">Thomas Shirindza</h3>
                   <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider mt-0.5">
@@ -65,9 +69,11 @@ export default function LeadershipSection() {
           <div className="bg-[#f7f9fd] rounded-3xl border border-slate-200 p-8 space-y-6 flex flex-col justify-between hover:border-slate-300 transition-all">
             <div className="space-y-4">
               <div className="flex items-center gap-4">
-                <div className="w-16 h-16 rounded-2xl bg-slate-900 text-white font-serif-display text-2xl flex items-center justify-center font-bold shadow-md shrink-0">
-                  JS
-                </div>
+                <img 
+                  src={directorImg} 
+                  alt="Jamela Sieta Shirindza" 
+                  className="w-16 h-16 rounded-2xl object-cover border border-slate-200 shadow-sm shrink-0"
+                />
                 <div>
                   <h3 className="text-xl font-bold text-slate-900">Jamela Sieta Shirindza</h3>
                   <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider mt-0.5">
