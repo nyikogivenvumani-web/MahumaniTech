@@ -32,7 +32,7 @@ export default function ContactSection() {
             <div className="space-y-6 text-slate-700 text-sm">
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center font-bold text-slate-900 shrink-0">
-                  📞
+                  
                 </div>
                 <div>
                   <span className="block text-xs font-semibold uppercase text-slate-500">Phone Support</span>
@@ -44,7 +44,7 @@ export default function ContactSection() {
 
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center font-bold text-slate-900 shrink-0">
-                  📍
+                  
                 </div>
                 <div>
                   <span className="block text-xs font-semibold uppercase text-slate-500">Regional Coverage</span>
@@ -54,7 +54,7 @@ export default function ContactSection() {
 
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center font-bold text-slate-900 shrink-0">
-                  ⏱️
+                  
                 </div>
                 <div>
                   <span className="block text-xs font-semibold uppercase text-slate-500">Operating Hours</span>
@@ -70,7 +70,7 @@ export default function ContactSection() {
             {submitted ? (
               <div className="py-12 text-center space-y-4">
                 <div className="w-12 h-12 bg-emerald-100 text-emerald-800 rounded-full flex items-center justify-center mx-auto text-xl font-bold">
-                  ✓
+                  
                 </div>
                 <h4 className="text-2xl font-serif-display font-bold text-slate-900">Message Received</h4>
                 <p className="text-sm text-slate-600 max-w-sm mx-auto">
