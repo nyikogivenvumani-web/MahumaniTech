@@ -6,17 +6,9 @@ import WhatsAppButton from "./components/WhatsAppButton.jsx";
 import HeroSection from "./pages/HeroSection.jsx";
 import AboutSection from "./pages/AboutSection.jsx";
 import LeadershipSection from "./pages/LeadershipSection.jsx";
-import ServicesSection from './pages/ServicesSection.jsx';
+import ServicesSection from "./pages/ServicesSection.jsx";
 import ClientsSection from "./pages/ClientsSection.jsx";
 import ContactSection from "./pages/ContactSection.jsx";
-
-function ServicesSection() {
-  return (
-    <section id="services" className="py-20 text-center bg-slate-50">
-      <h2 className="text-3xl font-bold">Services Section Placeholder</h2>
-    </section>
-  );
-}
 
 export default function App() {
   return (
