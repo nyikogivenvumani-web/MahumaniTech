@@ -1,13 +1,10 @@
-import React from 'react';
-import Navbar from './components/Navbar';
-import HeroSection from './pages/HeroSection';
-import AboutSection from './pages/AboutSection';
-import LeadershipSection from './pages/LeadershipSection';
-import ServicesSection from './pages/ServicesSection';
-import ClientsSection from './pages/ClientsSection';
-import ContactSection from './pages/ContactSection';
-import Footer from './components/Footer';
-import WhatsAppButton from './components/WhatsAppButton';
+import React from "react";
+import Navbar from "./components/Navbar.jsx";
+import HeroSection from "./pages/HeroSection.jsx";
+import AboutSection from "./pages/AboutSection.jsx";
+import LeadershipSection from "./pages/LeadershipSection.jsx";
+import ServicesSection from "./pages/ServicesSection.jsx";
+import ClientsSection from "./pages/ClientsSection.jsx";
 
 export default function App() {
   return (
