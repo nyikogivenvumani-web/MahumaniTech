@@ -78,7 +78,7 @@ export default function ServicesSection() {
           </p>
         </div>
 
-        {/* 8 Core Service Cards Grid */}
+        {/* Service Cards Grid */}
         <div className="space-y-6">
           <div className="flex items-center justify-between">
             <h3 className="font-serif-display text-2xl md:text-3xl text-slate-900">Service Offerings</h3>
@@ -89,19 +89,22 @@ export default function ServicesSection() {
             {services.map((item, index) => (
               <div 
                 key={index}
-                className="bg-white rounded-3xl border border-slate-200 p-6 flex flex-col justify-between hover:shadow-lg hover:border-slate-300 transition-all duration-300 group"
+                className="bg-white rounded-3xl border border-slate-200 p-6 flex flex-col justify-between hover:shadow-lg hover:border-slate-300 transition-all duration-300 group overflow-hidden"
               >
                 <div className="space-y-4">
-                  <div className="flex items-center justify-between">
-                    <div className="w-12 h-12 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center p-2.5">
-                      <img src={item.icon} alt={item.title} className="w-full h-full object-contain" />
-                    </div>
-                    <span className="inline-block text-[10px] font-bold uppercase tracking-widest text-slate-500 bg-slate-100 px-2.5 py-1 rounded-full">
+                  {/* Banner / Image Display */}
+                  <div className="relative w-full h-36 rounded-2xl overflow-hidden bg-slate-100 border border-slate-100">
+                    <img 
+                      src={item.icon} 
+                      alt={item.title} 
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" 
+                    />
+                    <span className="absolute top-2 right-2 text-[10px] font-bold uppercase tracking-widest text-slate-800 bg-white/90 backdrop-blur-sm px-2.5 py-1 rounded-full shadow-sm">
                       {item.badge}
                     </span>
                   </div>
 
-                  <h4 className="text-lg font-bold text-slate-900 group-hover:text-slate-800 transition-colors">
+                  <h4 className="text-lg font-bold text-slate-900 group-hover:text-slate-800 transition-colors pt-2">
                     {item.title}
                   </h4>
                   <p className="text-xs text-slate-600 leading-relaxed">
