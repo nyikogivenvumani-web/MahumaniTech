@@ -16,7 +16,7 @@ export default function HeroSection() {
         <div className="flex justify-center mb-6">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-slate-200 shadow-sm text-xs font-semibold text-slate-700">
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-            <span>South Africa • QCTO & Industry Certified ICT Partner</span>
+            <span>South Africa • Industry Certified ICT Partner</span>
           </div>
         </div>
 
