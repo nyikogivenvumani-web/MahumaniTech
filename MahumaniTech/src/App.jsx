@@ -6,8 +6,7 @@ import WhatsAppButton from "./components/WhatsAppButton.jsx";
 import HeroSection from "./pages/HeroSection.jsx";
 import AboutSection from "./pages/AboutSection.jsx";
 import LeadershipSection from "./pages/LeadershipSection.jsx";
-// Temporarily comment out the external import to isolate the issue:
-// import ServicesSection from "./pages/ServicesSection.jsx";
+import ServicesSection from './pages/ServicesSection.jsx';
 import ClientsSection from "./pages/ClientsSection.jsx";
 import ContactSection from "./pages/ContactSection.jsx";
 
