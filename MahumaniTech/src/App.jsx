@@ -1,11 +1,18 @@
 import React from 'react';
-import Navbar from './components/Navbar';
-import HeroSection from './components/HeroSection';
-import ServicesSection from './components/ServicesSection';
-import AboutSection from './components/AboutSection';
-import ContactSection from './components/ContactSection';
+
+// Components folder
+import FadeIn from './components/FadeIn';
 import Footer from './components/Footer';
-import { useScrollFadeIn } from './useScrollFadeIn';
+import Navbar from './components/Navbar';
+import WhatsAppButton from './components/WhatsAppButton';
+
+// Pages folder
+import AboutSection from './pages/AboutSection';
+import ClientsSection from './pages/ClientsSection';
+import ContactSection from './pages/ContactSection';
+import HeroSection from './pages/HeroSection';
+import LeadershipSection from './pages/LeadershipSection';
+import ServicesSection from './pages/ServicesSection';
 
 export default function App() {
   useScrollFadeIn(); // Initializes smooth fade-in for all matching classes
