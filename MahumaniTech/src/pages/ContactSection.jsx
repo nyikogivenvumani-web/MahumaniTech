@@ -7,7 +7,7 @@ export default function ContactSection() {
   const [errorMessage, setErrorMessage] = useState('');
 
   // Replace 'YOUR_FORMSPREE_ID' with your ID from Formspree connected to info@mahumanitec.co.za
-  const FORMSPREE_ID = 'https://formspree.io/f/xnpnoezw';
+  const FORMSPREE_ID = 'xnpnoezw';
 
   const handleSubmit = async (e) => {
     e.preventDefault();
