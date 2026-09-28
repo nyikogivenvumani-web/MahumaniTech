@@ -51,7 +51,22 @@ export default function ClientsSection() {
   ];
 
   return (
-    <section id="clients" className="py-24 bg-white border-t border-slate-100">
+    <section id="clients" className="py-24 bg-white border-t border-slate-100 overflow-hidden">
+      <style>{`
+        @keyframes scrollRightToLeft {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+          display: flex;
+          width: max-content;
+          animation: scrollRightToLeft 25s linear infinite;
+        }
+        .animate-marquee:hover {
+          animation-play-state: paused;
+        }
+      `}</style>
+
       <div className="max-w-6xl mx-auto px-4 space-y-20">
         
         {/* Main Header */}
@@ -67,59 +82,73 @@ export default function ClientsSection() {
           </p>
         </div>
 
-        {/* Section 1: Key Institutional Clients */}
+        {/* Section 1: Key Institutional Clients Infinite Slider */}
         <div className="space-y-6">
           <div className="flex items-center justify-between border-b border-slate-100 pb-4">
             <h3 className="font-serif-display text-2xl text-slate-900">Key Institutional Clients</h3>
             <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider">Public & Private Sector</span>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
-            {clients.map((client, index) => (
-              <div 
-                key={index}
-                className="bg-[#f7f9fd] rounded-2xl border border-slate-200/80 p-6 flex flex-col items-center justify-center h-32 hover:border-slate-300 hover:shadow-md transition-all group"
-              >
-                <img 
-                  src={client.logo} 
-                  alt={client.name} 
-                  className="max-h-16 max-w-[80%] object-contain grayscale group-hover:grayscale-0 transition-all duration-300 opacity-80 group-hover:opacity-100" 
-                />
-              </div>
-            ))}
+          <div className="relative w-full overflow-hidden py-2">
+            {/* Left & Right Gradient Fades for a Smooth Edge Look */}
+            <div className="absolute left-0 top-0 bottom-0 w-16 z-10 bg-gradient-to-r from-white to-transparent pointer-events-none" />
+            <div className="absolute right-0 top-0 bottom-0 w-16 z-10 bg-gradient-to-l from-white to-transparent pointer-events-none" />
+
+            <div className="animate-marquee gap-6">
+              {/* Render Twice for Continuous Seamless Loop */}
+              {[...clients, ...clients].map((client, index) => (
+                <div 
+                  key={index}
+                  className="w-56 shrink-0 bg-[#f7f9fd] rounded-2xl border border-slate-200/80 p-6 flex flex-col items-center justify-center h-32 hover:border-slate-300 hover:shadow-md transition-all group"
+                >
+                  <img 
+                    src={client.logo} 
+                    alt={client.name} 
+                    className="max-h-16 max-w-[80%] object-contain grayscale group-hover:grayscale-0 transition-all duration-300 opacity-80 group-hover:opacity-100" 
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
-        {/* Section 2: Strategic OEM Technology Partners */}
+        {/* Section 2: Strategic OEM Technology Partners Infinite Slider */}
         <div className="space-y-6">
           <div className="flex items-center justify-between border-b border-slate-100 pb-4">
             <h3 className="font-serif-display text-2xl text-slate-900">Technology Partners</h3>
             <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider">OEM Alliances</span>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
-            {partners.map((partner, index) => (
-              <div
-                key={index}
-                className="bg-[#f7f9fd] rounded-2xl border border-slate-200/80 p-6 flex flex-col items-center justify-center gap-3 h-36 hover:border-slate-300 hover:shadow-md transition-all group"
-              >
-                <div className="h-10 w-full flex items-center justify-center">
-                  <img
-                    src={partner.logo}
-                    alt={partner.name}
-                    className="max-h-full max-w-[80%] object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
-                  />
+          <div className="relative w-full overflow-hidden py-2">
+            {/* Left & Right Gradient Fades */}
+            <div className="absolute left-0 top-0 bottom-0 w-16 z-10 bg-gradient-to-r from-white to-transparent pointer-events-none" />
+            <div className="absolute right-0 top-0 bottom-0 w-16 z-10 bg-gradient-to-l from-white to-transparent pointer-events-none" />
+
+            <div className="animate-marquee gap-6">
+              {/* Render Twice for Continuous Seamless Loop */}
+              {[...partners, ...partners].map((partner, index) => (
+                <div
+                  key={index}
+                  className="w-56 shrink-0 bg-[#f7f9fd] rounded-2xl border border-slate-200/80 p-6 flex flex-col items-center justify-center gap-3 h-36 hover:border-slate-300 hover:shadow-md transition-all group"
+                >
+                  <div className="h-10 w-full flex items-center justify-center">
+                    <img
+                      src={partner.logo}
+                      alt={partner.name}
+                      className="max-h-full max-w-[80%] object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+                    />
+                  </div>
+                  <div className="text-center">
+                    <span className="block text-xs font-bold text-slate-900">
+                      {partner.name}
+                    </span>
+                    <span className="block text-[10px] text-slate-500 uppercase tracking-wider font-medium">
+                      {partner.role}
+                    </span>
+                  </div>
                 </div>
-                <div className="text-center">
-                  <span className="block text-xs font-bold text-slate-900">
-                    {partner.name}
-                  </span>
-                  <span className="block text-[10px] text-slate-500 uppercase tracking-wider font-medium">
-                    {partner.role}
-                  </span>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
 
