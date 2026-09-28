@@ -6,7 +6,6 @@ export default function ContactSection() {
   const [loading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
 
-  // Replace 'YOUR_FORMSPREE_ID' with your ID from Formspree connected to info@mahumanitec.co.za
   const FORMSPREE_ID = 'xnpnoezw';
 
   const handleSubmit = async (e) => {
@@ -64,7 +63,7 @@ export default function ContactSection() {
             <div className="space-y-6 text-slate-700 text-sm">
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center font-bold text-slate-900 shrink-0">
-                  
+                  📞
                 </div>
                 <div>
                   <span className="block text-xs font-semibold uppercase text-slate-500">Phone Support</span>
@@ -76,19 +75,19 @@ export default function ContactSection() {
 
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center font-bold text-slate-900 shrink-0">
-                  
+                  ✉️
                 </div>
                 <div>
                   <span className="block text-xs font-semibold uppercase text-slate-500">Email Address</span>
-                  <a href="mailto:info@mahumanitec.co.za" className="text-base font-bold text-slate-900 hover:underline">
-                    info@mahumanitec.co.za
+                  <a href="mailto:nyikogivenvumani@gmail.com" className="text-base font-bold text-slate-900 hover:underline">
+                    nyikogivenvumani@gmail.com
                   </a>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center font-bold text-slate-900 shrink-0">
-                  
+                  🌍
                 </div>
                 <div>
                   <span className="block text-xs font-semibold uppercase text-slate-500">Regional Coverage</span>
@@ -98,7 +97,7 @@ export default function ContactSection() {
 
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center font-bold text-slate-900 shrink-0">
-                  
+                  🕒
                 </div>
                 <div>
                   <span className="block text-xs font-semibold uppercase text-slate-500">Operating Hours</span>
@@ -118,7 +117,7 @@ export default function ContactSection() {
                 </div>
                 <h4 className="text-2xl font-serif-display font-bold text-slate-900">Message Received</h4>
                 <p className="text-sm text-slate-600 max-w-sm mx-auto">
-                  Thank you for reaching out. Your message was sent to <strong className="text-slate-800">info@mahumanitec.co.za</strong> and a representative will respond shortly.
+                  Thank you for reaching out. Your message was sent to <strong className="text-slate-800">nyikogivenvumani@gmail.com</strong> and a representative will respond shortly.
                 </p>
                 <button
                   onClick={() => {
