@@ -63,7 +63,7 @@ export default function ContactSection() {
             <div className="space-y-6 text-slate-700 text-sm">
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center font-bold text-slate-900 shrink-0">
-                  📞
+                  
                 </div>
                 <div>
                   <span className="block text-xs font-semibold uppercase text-slate-500">Phone Support</span>
@@ -75,7 +75,7 @@ export default function ContactSection() {
 
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center font-bold text-slate-900 shrink-0">
-                  ✉️
+                  
                 </div>
                 <div>
                   <span className="block text-xs font-semibold uppercase text-slate-500">Email Address</span>
@@ -87,7 +87,7 @@ export default function ContactSection() {
 
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center font-bold text-slate-900 shrink-0">
-                  🌍
+                  
                 </div>
                 <div>
                   <span className="block text-xs font-semibold uppercase text-slate-500">Regional Coverage</span>
@@ -97,7 +97,7 @@ export default function ContactSection() {
 
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center font-bold text-slate-900 shrink-0">
-                  🕒
+                  
                 </div>
                 <div>
                   <span className="block text-xs font-semibold uppercase text-slate-500">Operating Hours</span>
