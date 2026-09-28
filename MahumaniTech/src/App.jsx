@@ -1,45 +1,32 @@
 import React from 'react';
 
-// Components folder
-import FadeIn from './components/FadeIn';
-import Footer from './components/Footer';
+// UI Components (src/components/)
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
 
-// Pages folder
+// Page Sections (src/pages/)
+import HeroSection from './pages/HeroSection';
+import ServicesSection from './pages/ServicesSection';
 import AboutSection from './pages/AboutSection';
 import ClientsSection from './pages/ClientsSection';
-import ContactSection from './pages/ContactSection';
-import HeroSection from './pages/HeroSection';
 import LeadershipSection from './pages/LeadershipSection';
-import ServicesSection from './pages/ServicesSection';
+import ContactSection from './pages/ContactSection';
 
 export default function App() {
-  useScrollFadeIn(); // Initializes smooth fade-in for all matching classes
-
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white text-slate-900 font-sans antialiased">
       <Navbar />
-
       <main>
-        <div className="fade-in-element">
-          <HeroSection />
-        </div>
-
-        <div className="fade-in-element">
-          <ServicesSection />
-        </div>
-
-        <div className="fade-in-element">
-          <AboutSection />
-        </div>
-
-        <div className="fade-in-element">
-          <ContactSection />
-        </div>
+        <HeroSection />
+        <ServicesSection />
+        <AboutSection />
+        <ClientsSection />
+        <LeadershipSection />
+        <ContactSection />
       </main>
-
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 }

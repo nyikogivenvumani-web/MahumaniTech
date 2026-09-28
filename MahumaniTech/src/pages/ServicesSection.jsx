@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
+// If assets is inside src/assets/
 import salesImg from '../assets/services/sales.png';
 import disasterImg from '../assets/services/disater.png';
 import hostingImg from '../assets/services/hosting.png';
