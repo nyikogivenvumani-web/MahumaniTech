@@ -10,3 +10,23 @@ body {
 .font-serif-display {
   font-family: 'Instrument Serif', serif;
 }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-element {
+  opacity: 0;
+  will-change: opacity, transform;
+}
+
+.fade-in-element.is-visible {
+  animation: fadeInUp 0.7s ease-out forwards;
+}

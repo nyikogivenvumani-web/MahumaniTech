@@ -1,5 +1,5 @@
 import React from 'react';
-import FadeIn from './FadeIn';
+import { motion } from 'framer-motion';
 
 import salesImg from '../assets/services/sales.png';
 import disasterImg from '../assets/services/disater.png';
@@ -67,60 +67,73 @@ export default function ServicesSection() {
       <div className="max-w-6xl mx-auto px-4 space-y-16">
         
         {/* Managed IT Model Overview Header */}
-        <FadeIn direction="up">
-          <div className="bg-white rounded-3xl border border-slate-200/80 p-8 md:p-12 shadow-sm space-y-6">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-50 text-slate-800 text-xs font-semibold uppercase tracking-wider">
-              Proactive ICT Model
-            </div>
-            <h2 className="font-serif-display text-4xl md:text-5xl text-slate-900 tracking-tight">
-              Our Core Managed Services
-            </h2>
-            <p className="text-slate-600 text-base md:text-lg leading-relaxed max-w-4xl">
-              Based on a <strong className="text-slate-900 font-semibold">managed services model</strong>, our solutions are proactive rather than reactive. We prevent IT issues before they turn into costly downtime.
-            </p>
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-50px' }}
+          transition={{ duration: 0.7 }}
+          className="bg-white rounded-3xl border border-slate-200/80 p-8 md:p-12 shadow-sm space-y-6"
+        >
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-50 text-slate-800 text-xs font-semibold uppercase tracking-wider">
+            Proactive ICT Model
           </div>
-        </FadeIn>
+          <h2 className="font-serif-display text-4xl md:text-5xl text-slate-900 tracking-tight">
+            Our Core Managed Services
+          </h2>
+          <p className="text-slate-600 text-base md:text-lg leading-relaxed max-w-4xl">
+            Based on a <strong className="text-slate-900 font-semibold">managed services model</strong>, our solutions are proactive rather than reactive. We prevent IT issues before they turn into costly downtime.
+          </p>
+        </motion.div>
 
         {/* Service Cards Grid */}
         <div className="space-y-6">
-          <FadeIn direction="up" delay={100}>
-            <div className="flex items-center justify-between">
-              <h3 className="font-serif-display text-2xl md:text-3xl text-slate-900">Service Offerings</h3>
-              <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider">8 Specialized Divisions</span>
-            </div>
-          </FadeIn>
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-50px' }}
+            transition={{ duration: 0.5 }}
+            className="flex items-center justify-between"
+          >
+            <h3 className="font-serif-display text-2xl md:text-3xl text-slate-900">Service Offerings</h3>
+            <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider">8 Specialized Divisions</span>
+          </motion.div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((item, index) => (
-              <FadeIn key={index} direction="up" delay={(index % 4) * 100}>
-                <div className="bg-white rounded-3xl border border-slate-200 p-6 flex flex-col justify-between hover:shadow-lg hover:border-slate-300 transition-all duration-300 group overflow-hidden h-full">
-                  <div className="space-y-4">
-                    {/* Banner / Image Display */}
-                    <div className="relative w-full h-36 rounded-2xl overflow-hidden bg-slate-100 border border-slate-100">
-                      <img 
-                        src={item.icon} 
-                        alt={item.title} 
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" 
-                      />
-                      <span className="absolute top-2 right-2 text-[10px] font-bold uppercase tracking-widest text-slate-800 bg-white/90 backdrop-blur-sm px-2.5 py-1 rounded-full shadow-sm">
-                        {item.badge}
-                      </span>
-                    </div>
+              <motion.div 
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-50px' }}
+                transition={{ duration: 0.5, delay: (index % 4) * 0.1 }}
+                className="bg-white rounded-3xl border border-slate-200 p-6 flex flex-col justify-between hover:shadow-lg hover:border-slate-300 transition-all duration-300 group overflow-hidden h-full"
+              >
+                <div className="space-y-4">
+                  {/* Banner / Image Display */}
+                  <div className="relative w-full h-36 rounded-2xl overflow-hidden bg-slate-100 border border-slate-100">
+                    <img 
+                      src={item.icon} 
+                      alt={item.title} 
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" 
+                    />
+                    <span className="absolute top-2 right-2 text-[10px] font-bold uppercase tracking-widest text-slate-800 bg-white/90 backdrop-blur-sm px-2.5 py-1 rounded-full shadow-sm">
+                      {item.badge}
+                    </span>
+                  </div>
 
-                    <h4 className="text-lg font-bold text-slate-900 group-hover:text-slate-800 transition-colors pt-2">
-                      {item.title}
-                    </h4>
-                    <p className="text-xs text-slate-600 leading-relaxed">
-                      {item.description}
-                    </p>
-                  </div>
-                  
-                  <div className="pt-6 mt-4 border-t border-slate-100 flex items-center text-xs font-semibold text-slate-900 gap-1 group-hover:translate-x-1 transition-transform">
-                    <span>Learn more</span>
-                    <span>→</span>
-                  </div>
+                  <h4 className="text-lg font-bold text-slate-900 group-hover:text-slate-800 transition-colors pt-2">
+                    {item.title}
+                  </h4>
+                  <p className="text-xs text-slate-600 leading-relaxed">
+                    {item.description}
+                  </p>
                 </div>
-              </FadeIn>
+                
+                <div className="pt-6 mt-4 border-t border-slate-100 flex items-center text-xs font-semibold text-slate-900 gap-1 group-hover:translate-x-1 transition-transform">
+                  <span>Learn more</span>
+                  <span>→</span>
+                </div>
+              </motion.div>
             ))}
           </div>
         </div>

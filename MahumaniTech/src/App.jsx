@@ -3,45 +3,36 @@ import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import ServicesSection from './components/ServicesSection';
 import AboutSection from './components/AboutSection';
-import ClientsSection from './components/ClientsSection';
-import LeadershipSection from './components/LeadershipSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
-import WhatsAppButton from './components/WhatsAppButton';
-import FadeIn from './components/FadeIn';
+import { useScrollFadeIn } from './useScrollFadeIn';
 
 export default function App() {
+  useScrollFadeIn(); // Initializes smooth fade-in for all matching classes
+
   return (
-    <div className="min-h-screen bg-white text-slate-900 font-sans antialiased selection:bg-slate-900 selection:text-white">
-      {/* Sticky Top Navigation */}
+    <div className="min-h-screen bg-white">
       <Navbar />
 
       <main>
-        {/* Main Landing Sections */}
-        <HeroSection />
-        
-        <ServicesSection />
+        <div className="fade-in-element">
+          <HeroSection />
+        </div>
 
-        <FadeIn direction="up">
+        <div className="fade-in-element">
+          <ServicesSection />
+        </div>
+
+        <div className="fade-in-element">
           <AboutSection />
-        </FadeIn>
+        </div>
 
-        <FadeIn direction="up">
-          <ClientsSection />
-        </FadeIn>
-
-        <FadeIn direction="up">
-          <LeadershipSection />
-        </FadeIn>
-
-        <FadeIn direction="up">
+        <div className="fade-in-element">
           <ContactSection />
-        </FadeIn>
+        </div>
       </main>
 
-      {/* Footer & Floating Widgets */}
       <Footer />
-      <WhatsAppButton />
     </div>
   );
 }
